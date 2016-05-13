@@ -1,0 +1,179 @@
+/***************** Palette ********************
+
+
+|---- Couleur -------|----- Code -----
+Marron               |    #5D4037
+Marron (tableau)     |    #6D4C41
+Marron (fond)        |    #D7CCC8
+SteelBlue (fond)	 |	  #4682B4
+RoyalBlue (bottom)	 | 	  #4169E1
+White				 |	  #FFFFFF
+Lavender			 |	  #E6E6FA
+*/
+
+
+/***************** Base ********************/
+
+/* Header */
+
+#header-btn
+{
+	/*background-color: #4169E1;*/
+	font-size: 120% !important;
+	font-weight: bold;
+	margin-top: 12px;
+	margin-left: 4px;
+	border: 2px #4169E1 outset;
+}
+
+#navbar-left-important
+{
+	margin-top: 16px;
+	margin-left: 4px;
+}
+
+
+#header-Brand
+{
+	font-family: "Arial Black", Gadget, sans-serif;
+	/*font-family: "Comic Sans MS", cursive, sans-serif;*/
+	font-size: 200%;
+	line-height: 0.9;
+}
+
+#logo-PolyHeroes
+{
+	max-width: 100%;
+	height: auto;
+	border: 2px #000000 outset;
+	margin-top: 1%;
+}
+
+#navbar-header-important
+{
+	/*background-color: #000000;*/
+	max-width: 25%;
+	height: auto;
+	border-radius: 10%;
+	
+}
+
+#navbar-right-important
+{
+	max-width: 100%;
+}
+
+/* Body */
+
+body
+{
+    background-color: #4682B4;
+	/*font-family:"Times New Roman", Times, serif;*/
+}
+
+#menu-left
+{
+	margin: 2%;
+	padding: 1%;
+    float: left;
+    width: 150px;
+    border: 1px solid black;
+	border-radius: 10%;
+	background-color: #E6E6FA;
+	border: 2px #000000 ridge;
+}
+
+#sectionMain
+{
+	margin: 4%;
+	padding: 2%;
+	margin-left: 220px;
+	/*font-family: "Comic Sans MS", cursive, sans-serif;*/
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 120%;
+	background-color:#E6E6FA;
+	border-radius: 8%;	
+	border: 2px #000000 ridge;
+}
+
+#listThings
+{
+	border: 2px #4169E1 outset;
+}
+
+
+/* Footer */
+
+footer
+{
+	background-color: #FFFFFF;
+	width: 100%;
+	/*position: fixed;*/
+    right: 0%;
+    bottom: 0px;
+}
+
+#img-footer
+{
+	max-width: 14%;
+	height: auto;
+	margin-left: 1%;
+
+}
+
+/* CONNECTION-PAGE */
+
+#connection
+{
+	margin: 4%;
+	padding: 2%;
+	margin-left: 240px;
+	margin-right: 350px;
+	/*font-family: "Comic Sans MS", cursive, sans-serif;*/
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 120%;
+	background-color:#E6E6FA;
+	border: 2px #000000 outset;
+}
+
+/* TEXT PAGE */
+#fiche-perso-left
+{
+	margin: 2%;
+	padding: 1%;
+    float: left;
+    width: 150px;
+    border: 1px solid black;
+	border-radius: 10%;
+	background-color: #E6E6FA;
+}
+
+#texteAventure
+{
+	margin: 4%;
+	padding: 2%;
+	margin-left: 220px;
+	font-size: 120%;
+	background-color:#E6E6FA;
+	border-radius: 8%;	
+	border: 2px #000000 ridge;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#imageAventure
+{
+	max-width: 100%;
+    height: auto;
+}
+
+/* PARAMETRES */
+
+#parametres
+{
+
+	
+}
+
+/* A effacer si non efficace*/
+
+

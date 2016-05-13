@@ -1,0 +1,1 @@
+Ceci est une copie du code pour le site web PolyHeroes. La source provient d'un répertoire Wamp, et une autre copie est dans le répertoire monSite pour les git de sites web.
