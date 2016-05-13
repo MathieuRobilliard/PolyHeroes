@@ -2,7 +2,7 @@
 
 <?php
 
-function inscription($pseudo, $motDePasse)
+function inscription($pseudo, $motDePasseHash)
 		{
 			try 
 			{
@@ -12,7 +12,7 @@ function inscription($pseudo, $motDePasse)
 				// Preparation de la requete
 				$req = $pdo->prepare($sql);
 				// execution de la requete
-				$req->execute(array($pseudo, $motDePasse, 0));
+				$req->execute(array($pseudo, $motDePasseHash, 0));
 				
 			} 
 			catch (PDOException $e) {

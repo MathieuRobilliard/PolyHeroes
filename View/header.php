@@ -52,7 +52,8 @@ include("./../Controller/ControllerCookies.php");
 	    $randNumber = rand(1,7);
 		?>
 		<a class="pull-left" href="./../View/HomePage.php">
-			<?php echo '<img src="./../img/logo-PolyHeroes1" alt="Home Page" id="logo-PolyHeroes">' ?>
+			<?php echo "<img src='./../img/logo-PolyHeroes1' .$randNumber alt='Home Page' id='logo-PolyHeroes'>" ?>
+			<?php //echo '<img src="./../img/logo-PolyHeroes' .$randNumber. '" alt="Home Page" id="logo-PolyHeroes">' ?>
 		</a> 
 		
 	</div>

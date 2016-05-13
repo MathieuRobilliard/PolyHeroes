@@ -11,8 +11,11 @@
 	?>
 	<h4> Créez un nouveau personnage pour l'aventure <?php echo $nomAventure; ?> ici: </h4>
 	
-	<form method="post" action="../Controller/ControllerCreation.php?idAventure=$idAventure">
+	<form method="post" action="../Controller/ControllerCreation.php?nomAventure=<?php echo $nomAventure ?>">
     <p>
+		<label for="userName">Votre nom de compte :</label>
+        <input type="text" name="userName" />
+	
         <label for="name">Nom de votre personnage :</label>
         <input type="text" name="name" />
 	   

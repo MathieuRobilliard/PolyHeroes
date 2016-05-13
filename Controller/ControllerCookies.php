@@ -61,6 +61,4 @@ if (isset($_GET['nomPersonnage']))
 	log_in_Cookies("PolyHeroesCharacter", $nomPersonnage );
 }
 
-// print_r($_COOKIE);
-
 ?>

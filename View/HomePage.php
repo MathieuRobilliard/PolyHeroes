@@ -23,7 +23,7 @@
 		<em>Concept</em>:
 	</h3>
 	<p>
-		Le concepte consiste à, après avoir choisi une aventure, créer un personnage, puis le faire avancer 
+		Le concepte consiste, après avoir choisi une aventure, à créer un personnage, puis le faire avancer 
 		dans l'histoire en choisissant vous mêmes les actions prises par votre héros. Chaque choix vous emmène sur
 		une nouvelle page, et l'aventure continue!
 	</p>

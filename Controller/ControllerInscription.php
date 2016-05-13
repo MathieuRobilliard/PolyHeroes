@@ -16,7 +16,8 @@ if ($isPlayer != "")
 }
 elseif($isPlayer == "")
 {
-	inscription($pseudo,$motDePasse);
+	$motDePasseHash = md5($motDePasse);	// md5 has low security
+	inscription($pseudo,$motDePasseHash);
 	$accountCreated = true;
 	header('Location: ./../View/ViewInscription.php?accountCreated=' .$accountCreated);	
 }

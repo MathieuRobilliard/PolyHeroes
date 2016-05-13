@@ -1,18 +1,35 @@
 
 <?php
-$idAventure = $_GET['idAventure'];
 include("./../Model/ModelCreation.php");
-	
-$name = $_POST['name'];
-echo $name;
-echo $_POST['weapons'];
 
-//$idPersonnage = createCharacter($name);
+$nomAventure = $_GET['nomAventure'];
+include("./../Model/ModelAventures.php");
+$idAventure = get_idAventure($nomAventure);
 
-//$weapon = $_POST['weapon$compteurWeapons'];
-//$idEquipement = get_idEquipement($weapon);
-//aNewWeapon($idPersonnage,$idEquipement);
+$namePersonnage = $_POST['name'];
+$idWeapon = $_POST['weapons'];
+$nomUser = $_POST['userName'];
+$pvMax = 20; 	// A random will be better
 
-//header('Location: ./../View/ViewTexte.php?idAventure=' .$idAventure. '&amp;page=0');
-/*<a href="ViewTexte.php?page=<?php echo $page ?>&nomAventure=<?php echo $nomAventure ?>&nomPersonnage=<?php echo $nomPersonnage ?>" class="btn btn-primary" role="button">Reprenez l'aventure!</a>	*/	
+// Test if the $nomUser is in the BD
+include("./../Model/ModelConnection.php");
+$isPlayer = get_not_userName($nomUser);
+if ($isPlayer == $nomUser)
+{
+	$idJoueur = get_idJoueur($nomUser);
+	$idPersonnage = createCharacter($namePersonnage, $pvMax);
+
+	aNewWeapon($idPersonnage,$idWeapon);
+	createNewSauvegarde($idJoueur, $idAventure, $idPersonnage, $pvMax);
+
+	header('Location: ./../View/ViewTexte.php?page=0&nomAventure=' .$nomAventure. '&nomPersonnage=' .$namePersonnage);
+}
+else
+{
+	$valideName = false;
+	header('Location: ./../View/ViewCreation.php?validePseudo=' .$valideName);
+}
+
+
+
 ?>

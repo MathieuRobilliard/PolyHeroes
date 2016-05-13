@@ -119,5 +119,44 @@ function get_idCharacter($idJoueur,$idAventure)
 		}
 }
 
+function get_allEquipement($idPersonnage)
+{
+	try 
+	{	
+		include("model.php");
+		$sql = "SELECT idEquipement FROM possede WHERE idPersonnage = '$idPersonnage'";                      
+		// Preparation de la requete
+		$req = $pdo->prepare($sql);
+		// execution de la requete
+		$req->execute();
+		return $req->fetchAll(PDO::FETCH_OBJ);
+	} 
+	catch (PDOException $e) 
+	{
+		echo $e->getMessage();
+		die("<br /> Erreur dans la BDD ");
+	}
+}
+
+function get_nameEquipement($idEquipement)
+{
+	try 
+	{	
+		include("model.php");
+		$sql = "SELECT nomEquipement FROM equipement WHERE idEquipement = '$idEquipement'";                      
+		// Preparation de la requete
+		$req = $pdo->prepare($sql);
+		// execution de la requete
+		$req->execute();
+		$id = $req->fetch();
+		return $id[0];
+	} 
+	catch (PDOException $e) 
+	{
+		echo $e->getMessage();
+		die("<br /> Erreur dans la BDD ");
+	}
+}
+
 
 ?>
