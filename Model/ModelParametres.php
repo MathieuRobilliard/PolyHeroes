@@ -42,6 +42,24 @@ function get_userName($nomJoueur)
 			echo $e->getMessage();
 			die("<br /> Erreur dans la BDD ");
 		}
+}
+
+function destructionCompte($nomJoueur, $mdpJoueur)
+{
+	try 
+	{	
+		include("model.php");
+		$sql = "DELETE FROM joueurs WHERE nomJoueur = '$nomJoueur' AND mdpJoueur = '$mdpJoueur'";                      
+		// Preparation de la requete
+		$req = $pdo->prepare($sql);
+		// execution de la requete
+		$req->execute();
+	} 
+	catch (PDOException $e) 
+	{
+		echo $e->getMessage();
+		die("<br /> Erreur dans la BDD ");
+	}
 }			
 		
 		

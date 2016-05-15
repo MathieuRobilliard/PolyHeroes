@@ -4,7 +4,7 @@
 
 <!-- Ici faire un test de cookie: si le cookie existe alors on affiche pas: -->
 <div id="connection">
-	<p>Veuillez entrez votre pseudo et votre mot de passe:</p>
+	<p>Veuillez entrer votre pseudo et votre mot de passe:</p>
 	<form method="POST" action="../Controller/ControllerConnection.php">
     <p>
        <label for="pseudo">Votre pseudo :</label>

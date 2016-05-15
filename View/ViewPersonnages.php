@@ -47,7 +47,10 @@ function list_Personnages($tab_Sauvegarde,$nomAventure)
 					<p><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Equipement: <?php echo($nomEquipement); ?></p> <?php
 				} ?>
 				<p><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Progression: page <?php echo($page); ?> </p>
-				<p><a href="ViewTexte.php?page=<?php echo $page ?>&nomAventure=<?php echo $nomAventure ?>&nomPersonnage=<?php echo $nomPersonnage ?>" class="btn btn-primary" role="button">Reprenez l'aventure!</a></p>
+				<p>
+					<a href="ViewTexte.php?page=<?php echo $page ?>&nomAventure=<?php echo $nomAventure ?>&nomPersonnage=<?php echo $nomPersonnage ?>" class="btn btn-primary" role="button">Reprenez l'aventure!</a>
+					<a href="./../Controller/ControllerSuppression.php?nomAventure=<?php echo $nomAventure ?>&idPersonnage=<?php echo $idPersonnage ?>" class="btn btn-primary" role="button">Supprimer</a>
+				</p>
 			  </div>
 			</div>
 		  </div>

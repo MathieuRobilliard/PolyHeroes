@@ -158,5 +158,23 @@ function get_nameEquipement($idEquipement)
 	}
 }
 
+function supprimerPersonnage($idPersonnage)
+{
+	try 
+	{	
+		include("model.php");
+		$sql = "DELETE FROM sauvegarde WHERE idPersonnage = '$idPersonnage'";                      
+		// Preparation de la requete
+		$req = $pdo->prepare($sql);
+		// execution de la requete
+		$req->execute();
+	} 
+	catch (PDOException $e) 
+	{
+		echo $e->getMessage();
+		die("<br /> Erreur dans la BDD ");
+	}
+}
+
 
 ?>

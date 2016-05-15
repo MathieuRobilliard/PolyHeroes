@@ -47,6 +47,16 @@
     <input type="submit" value="Créer le personnage" ></code>
 	</form>	
 	
+	<?php
+			if (isset($_GET['valideName']))
+			{
+				if( $_GET['valideName'] == false) 
+				{
+					?> <div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Ce compte n'existe pas!</div> <?php
+				}
+			}
+			?>
+	
 </div>
 
 

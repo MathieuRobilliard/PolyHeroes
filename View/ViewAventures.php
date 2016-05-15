@@ -7,7 +7,16 @@
 
 <?php
 
-$tab_aventures = selectAventure();
+
+if (isset($_GET['recherche'])) 
+{
+	$recherche = ($_GET['recherche']); 
+	$tab_aventures = selectAventureRecherche($recherche);
+}
+else
+{
+	$tab_aventures = selectAventure();
+}
 
 ?> <div class="row"> <?php
 list_Aventures($tab_aventures);
@@ -22,7 +31,7 @@ function list_Aventures($tj) {
         ?>
 		  <div class="col-sm-6 col-md-4">
 			<div class="thumbnail" id="listThings">
-			  <img src="..." alt="[image Aventure]">
+			  <?php echo '<img  src="./../img/' .$nomAventure. '_main.jpg" alt="[image Aventure]">' ?>
 			  <div class="caption">
 				<h3>	<?php echo $nomAventure; ?>		</h3>
 				<p>		<?php echo $resume; ?>	</p>

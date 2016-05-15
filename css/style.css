@@ -9,6 +9,7 @@ SteelBlue (fond)	 |	  #4682B4
 RoyalBlue (bottom)	 | 	  #4169E1
 White				 |	  #FFFFFF
 Lavender			 |	  #E6E6FA
+MidnightBlue		 |	  #191970
 */
 
 
@@ -93,7 +94,7 @@ body
 	font-size: 120%;
 	background-color:#E6E6FA;
 	border-radius: 8%;	
-	border: 2px #000000 ridge;
+	border: 2px #191970 ridge;
 }
 
 #listThings

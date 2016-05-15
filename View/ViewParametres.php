@@ -44,6 +44,40 @@
 	<a id="header-btn" href="./../View/HomePage.php?logOut='true'" class="btn btn-primary" role="button">Se déconnecter</a> 
 	</div>
 	
+	<div id="connection">
+		<p><strong>Effacer votre compte ici.</strong></p>
+		<p>Pour cela, entrez votre pseudo et votre mot de passe. Attention, cette manoeuvre ne sera pas révérsible.</p>
+		<form method="POST" action="../Controller/ControllerDestruction.php">
+		<p>
+		   <label for="pseudo">Votre pseudo :</label>
+		   <input type="text" name="pseudo" />
+		   <br />
+		   <label for="pass">Votre mot de passe :</label>
+		   <input type="password" name="pass" />
+		</p>
+		<input type="submit" value="Effacer mon compte" ></code>
+		<p>
+		</form>
+		<?php
+		if (isset($_GET['validePseudoDestruction']) OR isset($_GET['valideMDPDestruction'])) 
+		{
+			if( $_GET['validePseudoDestruction'] == true AND $_GET['valideMDPDestruction'] == true) 
+			{
+				?> <div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Nouveau mot de passe enrengistré!</div> <?php
+			} 
+			elseif ($_GET['validePseudoDestruction'] == true AND $_GET['valideMDPDestruction'] == false) 
+			{
+				?> <div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Mot de passe incorecte!</div> <?php
+			} 
+			elseif ($_GET['validePseudoDestruction'] == false AND $_GET['valideMDPDestruction'] == false) 
+			{
+				?> <div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Ce pseudo n'existe pas!</div> <?php
+			}
+		
+		}
+		?>
+	</div>
+	
 <section>
 
 <?php include("./../View/footer.php"); ?>

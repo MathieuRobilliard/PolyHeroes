@@ -10,6 +10,7 @@ include("./../Controller/ControllerCookies.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>PolyHeroes</title>
+	<link rel="icon" type="image/ico" href="./../img/favicon.png" />
 
     <!-- CSS LINKS -->
     <link href="../css/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +32,7 @@ include("./../Controller/ControllerCookies.php");
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="./../css/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 	
 	
 	
@@ -52,8 +53,7 @@ include("./../Controller/ControllerCookies.php");
 	    $randNumber = rand(1,7);
 		?>
 		<a class="pull-left" href="./../View/HomePage.php">
-			<?php echo "<img src='./../img/logo-PolyHeroes1' .$randNumber alt='Home Page' id='logo-PolyHeroes'>" ?>
-			<?php //echo '<img src="./../img/logo-PolyHeroes' .$randNumber. '" alt="Home Page" id="logo-PolyHeroes">' ?>
+			<?php echo '<img src="./../img/logo-PolyHeroes' .$randNumber. '.jpg" alt="Home Page" id="logo-PolyHeroes">' ?>
 		</a> 
 		
 	</div>
@@ -64,7 +64,7 @@ include("./../Controller/ControllerCookies.php");
 	  
 		  <form id="navbar-left-important" class="navbar-form navbar-left" method="post" action="../Controller/ControllerRecherche.php?">
 			<div class="form-group">
-			  <input type="text" class="form-control" placeholder="Cherchez une aventure" name="recherche">
+			  <input type="text" class="form-control" placeholder="Chercher une aventure" name="recherche">
 			</div>
 			<input type="submit" class="btn btn-default" value="Chercher" >
 		  </form> 

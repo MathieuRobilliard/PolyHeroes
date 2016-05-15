@@ -9,12 +9,12 @@ $motDePasse = $_POST['pass'];
 include("./../Model/ModelInscription.php");
 $isPlayer = get_not_users($pseudo);
 
-if ($isPlayer != "")
+if ($isPlayer != "" OR $pseudo == "" OR $motDePasse == "")
 {
 	$noValidePseudo = true;
 	header('Location: ./../View/ViewInscription.php?noValidePseudo=' .$noValidePseudo);
 }
-elseif($isPlayer == "")
+elseif($isPlayer == "" AND $pseudo != "" AND $motDePasse != "")
 {
 	$motDePasseHash = md5($motDePasse);	// md5 has low security
 	inscription($pseudo,$motDePasseHash);

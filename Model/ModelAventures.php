@@ -7,7 +7,27 @@ function selectAventure()
 			try 
 			{
 				include("model.php");
-				$sql = "SELECT nomAventure, resumeAventure, fichierJson FROM aventure";                       
+				$sql = "SELECT nomAventure, resumeAventure FROM aventure";                       
+				// Preparation de la requete
+				$req = $pdo->prepare($sql);
+				// execution de la requete
+				$req->execute();
+				return $req->fetchAll(PDO::FETCH_OBJ);
+				
+			} 
+			catch (PDOException $e) 
+			{
+				echo $e->getMessage();
+				die("<br /> Erreur dans la BDD ");
+			}
+		}
+		
+function selectAventureRecherche($recherche)
+		{
+			try 
+			{
+				include("model.php");
+				$sql = "SELECT nomAventure, resumeAventure FROM aventure WHERE nomAventure LIKE '%$recherche%'";                       
 				// Preparation de la requete
 				$req = $pdo->prepare($sql);
 				// execution de la requete

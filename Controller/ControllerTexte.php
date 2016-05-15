@@ -3,8 +3,6 @@
 if (isset($_GET['nomAventure']) AND isset($_GET['page'])) 
 {
 	$page = $_GET['page'];
-	echo("Page actuelle:");
-	echo $page;
 	
 	$nomAventure = $_GET['nomAventure'];
 	$json = file_get_contents("./../json/$nomAventure.json");

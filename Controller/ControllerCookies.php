@@ -60,5 +60,4 @@ if (isset($_GET['nomPersonnage']))
 	$nomPersonnage = $_GET['nomPersonnage'];
 	log_in_Cookies("PolyHeroesCharacter", $nomPersonnage );
 }
-
 ?>

@@ -27,7 +27,7 @@ if ($isPlayer == $nomUser)
 else
 {
 	$valideName = false;
-	header('Location: ./../View/ViewCreation.php?validePseudo=' .$valideName);
+	header('Location: ./../View/ViewCreation.php?valideName=' .$valideName. '&nomAventure=' .$nomAventure);
 }
 
 
