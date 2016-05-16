@@ -25,7 +25,11 @@ function createCharacter($name, $pvMax)
 		}
 		
 		
-		
+/*
+* Insert a new link between a character and a weapon in the BD
+*@param $idPersonnage int The id of the character.
+*@param $idEquipement int The id of the equipement.
+*/		
 function aNewWeapon($idPersonnage,$idEquipement)
 		{
 			try 
@@ -43,6 +47,10 @@ function aNewWeapon($idPersonnage,$idEquipement)
 			}
 		}
 		
+/**
+* This function select all the tools in the BD.
+* @return A PDO object with all the tools selected
+*/	
 function get_AllNameEquipement()
 		{
 			try 
@@ -61,6 +69,11 @@ function get_AllNameEquipement()
 			}
 		}
 		
+/**
+* This function select the id of a tool in the BD if we know it name.
+* @param $nomEquipement string The name of the tool we want to know the id
+* @return int the id, NULL else
+*/	
 function get_idEquipement($nomEquipement)
 		{
 			try 
@@ -80,6 +93,11 @@ function get_idEquipement($nomEquipement)
 			}
 		}		
 		
+/**
+* This function select the resume of a tool in the BD if we know it name.
+* @param $nomEquipement string The name of the tool we want to know the id
+* @return string the resume
+*/
 function get_resumeEquipement($nomEquipement)
 		{
 			try 
@@ -99,6 +117,9 @@ function get_resumeEquipement($nomEquipement)
 			}
 		}		
 
+/**
+* This function put a new save in the BD.
+*/
 function createNewSauvegarde($idJoueur, $idAventure, $idPersonnage, $pvMax)
 		{
 			try 
@@ -117,6 +138,11 @@ function createNewSauvegarde($idJoueur, $idAventure, $idPersonnage, $pvMax)
 			}
 		}	
 
+/**
+* This function select the id of a user in the BD if we know it name.
+* @param $nomJoueur string The name of the user we want to know the id
+* @return int the id
+*/
 function get_idJoueur($nomJoueur)
 		{
 			try 

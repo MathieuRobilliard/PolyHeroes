@@ -2,6 +2,10 @@
 <?php
 include("./../Model/ModelCookies.php");
 
+/**
+* This function select all the users in the BD.
+* @return A PDO object with all the users selected
+*/	
 function get_All_Users()
 		{
 			try 
@@ -46,6 +50,12 @@ function get_not_userName($nomJoueur)
 		}
 }	
 
+/**
+* This function seek in the BD if a password exist for a user name.
+* @param $nomJoueur The name of player we want to compare the password
+* @param $motDePasse String the password we want to know if it is right
+* @return $id[0] the password if it exist, NULL else
+*/	
 function get_not_userPassWord($nomJoueur, $motDePasse)
 {
 	try 

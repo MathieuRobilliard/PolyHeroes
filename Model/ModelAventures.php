@@ -2,6 +2,10 @@
 
 <?php
 
+/*
+* Select all adventures in the BD
+* @return A PDO object with all the adventures
+*/
 function selectAventure()
 		{
 			try 
@@ -21,7 +25,11 @@ function selectAventure()
 				die("<br /> Erreur dans la BDD ");
 			}
 		}
-		
+	
+/*
+* Select all adventures in the BD after a search by the user
+* @return A PDO object with all the adventures selected
+*/	
 function selectAventureRecherche($recherche)
 		{
 			try 
@@ -44,6 +52,7 @@ function selectAventureRecherche($recherche)
 	
 /**
  * Get the id of an aventure if we know her name
+ * @return int idAventure
  */
 function get_idAventure($nomAventure)
 {
