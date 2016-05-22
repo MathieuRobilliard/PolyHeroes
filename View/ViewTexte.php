@@ -1,13 +1,22 @@
-<?php include("header.php"); 
-	  include("menu-left.php"); ?>
+<?php 
+include("header.php"); 
+include("./../Controller/ControllerTexte.php");
+include("menu-left.php"); 
+?>
 	  
-<?php include("./../Controller/ControllerTexte.php"); ?>
-
-
 <section id=texteAventure>
-	<?php 
+	
+	<!-- Print the text -->
+	<?php 		
+		if ($pvActuels <= 0)
+		{
+			echo( "Votre personnage est mort!");
+		}
+		else 
+		{
+			echo( $tab_Json[$page]);
+		}
 		
-		echo( $tab_Json[$page]);
 	?>
 </section>
 

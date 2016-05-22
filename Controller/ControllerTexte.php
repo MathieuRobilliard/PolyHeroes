@@ -25,11 +25,22 @@ if (isset($_GET['nomAventure']) AND isset($_GET['page']))
 			$nomPersonnage = get_data_Cookies("PolyHeroesCharacter");
 		}
 		
-		$idPersonnage = get_idCharacterWithName($nomPersonnage);		// ERREUR BD 
+		$idPersonnage = get_idCharacterWithName($nomPersonnage);
 		$nomJoueur = get_data_Cookies("PolyHeroesName");
 		require('./../Model/ModelTexte.php');
 		$idJoueur = get_idJoueurWithName($nomJoueur);
 		saveThePage($page,$idAventure,$idPersonnage,$idJoueur);	
+		
+		// To know how many Hp the character has
+		$pvActuels = KnowPvActuels($idPersonnage, $idJoueur, $idAventure);
+		$pvMax = KnowPvMax($idPersonnage);
+		
+		if (isset($_GET['perdrePV']))
+		{
+			$nbPvPerdus = $_GET['perdrePV'];
+			perdrePV($nbPvPerdus, $idPersonnage, $idJoueur, $pvActuels);
+			header('Location: ./../View/ViewTexte.php?nomAventure=' .$nomAventure. '&idPersonnage='.$idPersonnage. '&page=' .$page);
+		}
 		
 	}
 

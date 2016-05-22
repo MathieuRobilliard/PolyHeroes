@@ -156,7 +156,7 @@ footer
 	margin-left: 220px;
 	font-size: 120%;
 	background-color:#E6E6FA;
-	border-radius: 8%;	
+	border-radius: 4%;	
 	border: 2px #000000 ridge;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
@@ -165,6 +165,11 @@ footer
 {
 	max-width: 100%;
     height: auto;
+}
+
+#hp-Bar
+{
+	margin: 1%;
 }
 
 /* PARAMETRES */
