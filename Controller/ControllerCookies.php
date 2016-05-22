@@ -54,6 +54,14 @@ if (isset($_GET['logOut']))
 	}
 }
 
+if (isset($_GET['suppChar']))
+{
+	if( $_GET['suppChar'] == true ) 
+	{
+		log_out_Cookies("PolyHeroesCharacter");
+	}
+}
+
 /* When a user start an Aventure, to remember the name of the character */
 if (isset($_GET['nomPersonnage']))
 {

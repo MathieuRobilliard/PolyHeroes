@@ -11,6 +11,7 @@ include("menu-left.php");
 		if ($pvActuels <= 0)
 		{
 			echo( "Votre personnage est mort!");
+			
 		}
 		else 
 		{

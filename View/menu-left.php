@@ -4,7 +4,8 @@
 
     <ul class="nav nav-pills nav-stacked">
 		<li><a href="HomePage.php">Accueil</a></li>
-		<li><a href="ViewAventures.php">Liste des aventures</a></li>
+		<?php $suppChar = true; ?>
+		<li><a href="ViewAventures.php?suppChar=<?php echo $suppChar ?>">Liste des aventures</a></li>
 		<li><a href="ViewQuiSommesNous.php">Qui sommes nous?</a></li>
     </ul>
 	

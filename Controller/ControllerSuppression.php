@@ -4,8 +4,8 @@ $nomAventure = $_GET['nomAventure'];
 $idPersonnage = $_GET['idPersonnage'];
 
 supprimerPersonnage($idPersonnage);
-// IL faut aussi supprimer dans la table personnage, avec un trigger.
-header('Location: ./../View/ViewPersonnages.php?nomAventure=' .$nomAventure);
+$suppChar = true;
+header('Location: ./../View/ViewPersonnages.php?nomAventure=' .$nomAventure. '&suppChar=' .$suppChar);
 
 
 
